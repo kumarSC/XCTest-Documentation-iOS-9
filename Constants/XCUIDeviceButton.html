@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>XCUIKeyModifierFlags Constants Reference</title>
+	<title>XCUIDeviceButton Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">XCUIKeyModifierFlags Constants Reference</h1>
+					<h1 class="title">XCUIDeviceButton Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>XCUIElement.h</td>
+	<td>XCUIDevice.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,27 +75,36 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">XCUIKeyModifierFlags</h3>
+                    <h3 class="subsubtitle method-title">XCUIDeviceButton</h3>
                     
+					
+					<div class="section section-overview">
+                        <p>@enum XCUIDeviceButton</p>
+
+<p>Represents a physical button on a device.</p><div class="note"><p><strong>Note:</strong> Some buttons are not available in the Simulator, and should not be used in your tests.
+You can use a block like this:</p>
+
+<h1>if !TARGET_OS_SIMULATOR</h1>
+
+<p>// test code that depends on buttons not available in the Simulator</p>
+
+<h1>endif</h1>
+
+<p>in your test code to ensure it does not call unavailable APIs.</p></div>
+					</div>
+					
+					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_OPTIONS(NSUInteger, XCUIKeyModifierFlags ) {<br>
+                        <code>typedef NS_ENUM(NSInteger, XCUIDeviceButton ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">XCUIKeyModifierNone</a> = 0,<br>
+                            &nbsp;&nbsp; <a href="">XCUIDeviceButtonHome</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">XCUIKeyModifierAlphaShift</a> = ( 1 &lt; &lt; 0 ),<br>
+                            &nbsp;&nbsp; <a href="">XCUIDeviceButtonVolumeUp</a> = 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">XCUIKeyModifierShift</a> = ( 1 &lt; &lt; 1 ),<br>
-                            
-                            &nbsp;&nbsp; <a href="">XCUIKeyModifierControl</a> = ( 1 &lt; &lt; 2 ),<br>
-                            
-                            &nbsp;&nbsp; <a href="">XCUIKeyModifierAlternate</a> = ( 1 &lt; &lt; 3 ),<br>
-                            
-                            &nbsp;&nbsp; <a href="">XCUIKeyModifierOption</a> = XCUIKeyModifierAlternate,<br>
-                            
-                            &nbsp;&nbsp; <a href="">XCUIKeyModifierCommand</a> = ( 1 &lt; &lt; 4 ),<br>
+                            &nbsp;&nbsp; <a href="">XCUIDeviceButtonVolumeDown</a> = 3,<br>
                             
                             };</code>
                     
@@ -105,72 +114,53 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="XCUIKeyModifierNone"></a><code>XCUIKeyModifierNone</code></dt>
+                            <dt><a name="" title="XCUIDeviceButtonHome"></a><code>XCUIDeviceButtonHome</code></dt>
 <dd>
+
+
+<p>@enum XCUIDeviceButton</p>
+
+
+
+
 
     
 	<p>
-		Declared In <code class="declared-in-ref">XCUIElement.h</code>.
+		Declared In <code class="declared-in-ref">XCUIDevice.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="XCUIKeyModifierAlphaShift"></a><code>XCUIKeyModifierAlphaShift</code></dt>
+                            <dt><a name="" title="XCUIDeviceButtonVolumeUp"></a><code>XCUIDeviceButtonVolumeUp</code></dt>
 <dd>
+
+
+<p>@enum XCUIDeviceButton</p>
+
+
+
+
 
     
 	<p>
-		Declared In <code class="declared-in-ref">XCUIElement.h</code>.
+		Declared In <code class="declared-in-ref">XCUIDevice.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="XCUIKeyModifierShift"></a><code>XCUIKeyModifierShift</code></dt>
+                            <dt><a name="" title="XCUIDeviceButtonVolumeDown"></a><code>XCUIDeviceButtonVolumeDown</code></dt>
 <dd>
+
+
+<p>@enum XCUIDeviceButton</p>
+
+
+
+
 
     
 	<p>
-		Declared In <code class="declared-in-ref">XCUIElement.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="XCUIKeyModifierControl"></a><code>XCUIKeyModifierControl</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">XCUIElement.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="XCUIKeyModifierAlternate"></a><code>XCUIKeyModifierAlternate</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">XCUIElement.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="XCUIKeyModifierOption"></a><code>XCUIKeyModifierOption</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">XCUIElement.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="XCUIKeyModifierCommand"></a><code>XCUIKeyModifierCommand</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">XCUIElement.h</code>.
+		Declared In <code class="declared-in-ref">XCUIDevice.h</code>.
 	</p>
 	
 </dd>
@@ -179,6 +169,17 @@
                     </div>
                     
 
+                    
+                    
+
+                    
+
+                    
+                    <div class="method-subsection declared-in-section">
+                        <h4 class="method-subtitle">Declared In</h4>
+                        <p><code class="declared-in-ref">XCUIDevice.h</code></p>
+                    </div>
+                    
                     
                     
                     
